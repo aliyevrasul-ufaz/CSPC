@@ -19,4 +19,4 @@ Speed comparison (loop vs NumPy):
  speed-up: 8597.8x faster
 Tests: all passing? yes
 Conclusion:
-Vectorized NumPy implementation offers significantly higher execution speed compared to pure Python loops when simulating radioactive decay for large numbers of atoms. All unit tests successfully verified that the simulation output matches the analytical physical decay law.
+Vectorized NumPy implementation offers significantly higher execution speed compared to pure Python loops when simulating radioactive decay for large numbers of atoms. All unit tests successfully verified that the simulation output matches the analytical physical decay law. 
