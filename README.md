@@ -38,3 +38,27 @@ The acceleration data was much noisier than the position data because numerical 
 
 ### Integration and Position Recovery
 Integrating the noisy acceleration back to velocity and then to position produced a reconstructed position that was close to the original measurements. The largest absolute difference was 0.7845625000002201 m, showing that integration reduced the effect of noise.
+## PW2 — Lab B: Optimization in Chemistry
+
+### Part 2 — Three routes to a minimum
+For the easy convex function, gradient descent, Newton's method, and SLSQP all found the minimum near x = 3.
+For the harder function, the results depended on the method and the starting point. Newton's method can converge to a maximum or a minimum because it solves g'(x) = 0. The sign of g''(x) identifies the type of stationary point.
+
+### Part 3 — Reaction kinetics
+The first-order model C(t) = C0 * exp(-k*t) was fitted to the measured concentration data by minimizing the sum of squared errors using SLSQP.
+- Fitted rate constant: $k \approx 0.2618$
+- The fitted curve was compared with the measured data and saved in `kinetics.png`.
+
+### Part 4 — Chemical equilibrium
+The equilibrium extent was calculated using Newton's method and SLSQP. Both methods gave the same result.
+- Equilibrium extent: $x \approx 0.6638$
+- Equilibrium amounts:
+  - $H_2 \approx 0.3362$ mol
+  - $I_2 \approx 0.3362$ mol
+  - $HI \approx 1.3277$ mol
+- The composition curve is saved in `equilibrium.png`.
+
+### Part 5 — Titration (bonus)
+The equivalence point was identified as the volume where the numerical slope of the pH curve was largest.
+- Equivalence point volume: $50.0$ mL
+- The titration curve and its derivative slope are saved in `titration.png`.
